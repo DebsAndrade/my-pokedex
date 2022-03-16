@@ -1,0 +1,36 @@
+.botao-futuante {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: rgb(255, 196, 0);
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px rgb(70, 69, 69);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playpause-icone {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.playpause-icone+label::before {
+    content: "►";
+    display: block;
+    font-size: 25px;
+    position: relative;
+    color: #a54a00;
+    transition: 0.1s transform ease;
+    transform: rotate(0);
+}
+
+.playpause-icone:checked+label::before {
+    content: "❚❚";
+    transition: 0.1s transform ease;
+    transform: rotate(-180deg);
+}
